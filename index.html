@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="env-loader.js"></script>
+    <script src="config.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>REST App</h1>
+        
+        <div class="form-container">
+            <div class="form-group">
+                <input type="text" id="nameInput" placeholder="Your name" required>
+            </div>
+            
+            <div class="form-group">
+                <textarea id="messageInput" placeholder="Write your request ..." required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <input type="text" id="noteInput" placeholder="Additional note (optional)">
+            </div>
+            
+            <div class="button-group">
+                <button id="sendBtn" class="btn primary">Send</button>
+                <button id="viewDataBtn" class="btn secondary">View Data</button>
+                <button id="testConnectionBtn" class="btn test">Test Connection</button>
+            </div>
+        </div>
+
+        <div class="connection-status" id="connectionStatus" style="display: none;">
+            <h3>Connection Status</h3>
+            <pre id="connectionResult"></pre>
+        </div>
+
+        <div class="data-container" id="dataContainer" style="display: none;">
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Message</th>
+                        <th>Note</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Data will be populated here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="notification" class="notification" style="display: none;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
